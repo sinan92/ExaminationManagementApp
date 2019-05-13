@@ -1,0 +1,30 @@
+.pxl-knop{
+  margin-top: 10px;
+}
+
+  button[type='submit']{
+    background: #58a618;
+    padding: 4px 20px;
+    height: 30px;
+    border: none;
+    color: #fff;
+    margin-top: 10px;
+  }
+
+
+  button[type='submit']:hover{
+    background-color: #61b61c;
+  }
+
+  button[type='submit']:disabled{
+    background-color: #8b9781c7;
+  }
+
+  #succesMessage{
+    margin-top:15px;
+    visibility: hidden;
+  }
+#hashCode{
+  margin-top: 20px;
+  visibility: hidden;
+}

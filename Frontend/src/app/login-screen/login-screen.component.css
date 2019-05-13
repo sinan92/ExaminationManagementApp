@@ -1,0 +1,59 @@
+main{
+  float: left;
+  height: 100%;
+  width: 100%;
+}
+
+#branding-wrapper{
+  float: left;
+  margin-left: 20px;
+  width: 95%;
+  height: 100%;
+}
+
+#branding{
+  background: url("assets/images/illustration.png") no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin-right: 480px;
+}
+
+#content-wrapper{
+  float: left;
+  margin-left: -480px;
+  padding: 0 50px;
+}
+
+header{
+  margin: 30px 0;
+}
+
+#login-form input[type="text"]{
+  display: block;
+  margin: 10px 0;
+  width: 342px;
+  height: 28px;
+  padding: 0 3px;
+}
+
+
+#submit{
+
+}
+
+input[type='submit']{
+  background: #58a618;
+  padding: 4px 20px;
+  height: 30px;
+  border: none;
+  color: #fff;
+}
+
+
+input[type='submit']:hover{
+  background-color: #61b61c;
+}
+
+input[type='submit']:disabled{
+  background-color: #8b9781c7;
+} 

@@ -1,0 +1,53 @@
+header{
+  margin: 20px 0;
+}
+
+#user-panel{
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  width: 200px;
+}
+
+#user-panel *{
+  display: inline-block;
+}
+
+#pxl-logo{
+  position: absolute;
+  margin-top: -50px;
+  margin-left: 90px;
+
+}
+
+#menu{
+  float: left;
+  background: #000;
+  width: 100%;
+}
+
+#menu ul{
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#menu ul li{
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#menu ul li a{
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+
+#menu ul li a:hover, #menu ul li a:active{
+  color: #58A618;
+}

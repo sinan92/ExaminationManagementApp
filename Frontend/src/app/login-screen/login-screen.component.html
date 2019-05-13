@@ -1,0 +1,19 @@
+<main>
+  <div id="branding-wrapper">
+    <div id="branding"></div>
+  </div>
+  <div id="content-wrapper">
+    <header>
+      <img src="assets/images/logo.png" alt="logo" />
+    </header>
+    <div id="form-content">
+      <h2>Aanmelden</h2>
+      <form id="login-form"  (ngSubmit)="onSubmit(loginForm)" [formGroup]="loginForm">
+        <input type="text" [(ngModel)]="studentNumber" name="studentNumber" id="studentnummer" placeholder="Studentnummer" formControlName="studentnummer"/>
+        <input type="text" [(ngModel)]="firstName" name="firstName" id="voornaam" placeholder="Voornaam"  formControlName="naam"/>
+        <input type="text" [(ngModel)]="lastName" name="lastName" id="achternaam" placeholder="Achternaam"  formControlName="achternaam"/>
+        <input type="submit" id="submit" value="Sign in" [disabled]="!loginForm.valid" />
+      </form>
+    </div>
+  </div>
+</main>

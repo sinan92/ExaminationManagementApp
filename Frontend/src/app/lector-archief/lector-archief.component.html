@@ -1,0 +1,22 @@
+<app-lector-header></app-lector-header>
+<main>
+  <h3>Archief</h3>
+  <table id="overzicht" class="table">
+    <thead>
+      <tr>
+        <th>Examen naam</th>
+        <th>Datum</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bundel of examenBundels">
+        <td>{{bundel.naam}}</td>
+        <td>{{bundel.datum | date: 'dd/MM/yyyy HH:mm:ss'}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="float-right">
+    <button class="pxl-knop" id="verwijder-knop">Verwijder mogelijke examens</button>
+  </div>
+</main>
+

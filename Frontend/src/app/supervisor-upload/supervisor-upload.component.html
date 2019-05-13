@@ -1,0 +1,65 @@
+<app-supervisor-header></app-supervisor-header>
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+
+        <h3>Geüploade bestanden</h3>
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th scope="col">Naam</th>
+            <th scope="col">Actie</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let examen of examens">
+            <td>{{examen.naam}}</td>
+            <td class="d-flex justify-content-around">
+              <a class="fa fa-download fake-link" (click)="getExamSkelet(examen.id)"></a>
+              <a class="fa fa-edit" [routerLink]="['/supervisor/examen/aanpassen', examen.id]"></a>
+              <a class="fa fa-trash" [routerLink]="['/supervisor/examen/verwijderen', examen.id]"></a></td>
+          </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <div class="col-sm">
+
+
+        <h3>Upload examenskelet</h3>
+        <form (ngSubmit)="onSubmit(supervisorUploadForm)" [formGroup]="supervisorUploadForm">
+          <div class="row">
+            <div class="col-3">
+              <label for="vak">Vak</label>
+            </div>
+            <div class="col-9">
+              <div class="form-group">
+                <input class="form-control" [(ngModel)]="examen_naam" type="text" id="vak" formControlName="vakNaam"/>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <label for="exampleInputFile">Bestand</label>
+            </div>
+            <div class="col-9">
+              <div class="form-group">
+                <div class="form-group">
+                  <input type="file" accept=".zip" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" (change)="fileChanged($event)" formControlName="bestand">
+                  <small id="fileHelp" class="form-text text-muted">Upload hier het skelet die je wilt uploaden.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row float-right">
+            <input type="submit" class="pxl-knop" id="zoek-knop" value="Upload" [disabled]="!supervisorUploadForm.valid" />
+          </div>
+          <div class="alert alert-success" id="succesMessage">
+            Examenskelet geüpload
+           </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>

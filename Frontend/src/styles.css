@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Segoe UI Light";
+  src: url("assets/fonts/segoeuil.ttf");
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI Light" , "Segoe" , "SegoeUI-Light-final", Tahoma, Helvetica, Arial, sans-serif;
+}
+
+main{
+  margin: 120px auto;
+  width: 1150px;
+}
+
+.pxl-knop{
+  background: #58a618;
+  padding: 5px 20px;
+  height: 35px;
+  border: none;
+  color: #fff;
+}

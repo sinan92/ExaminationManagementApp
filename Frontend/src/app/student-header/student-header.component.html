@@ -1,0 +1,16 @@
+<header>
+  <div id="user-panel">
+    <i class="fa fa-user-o"></i>
+    <p>{{student?.firstName}} {{student?.lastName}}</p>
+  </div>
+  <div id="pxl-logo">
+    <img src="assets/images/logo_witte_rand.png" alt="logo" />
+  </div>
+  <div id="menu">
+    <ul>
+      <li><a [routerLink]="['/student/download']">Download</a></li>
+      <li><a [routerLink]="['/student/upload']">Upload</a></li>
+      <li><a [routerLink]="['/uitloggen']">Uitloggen</a></li>
+    </ul>
+  </div>
+</header>

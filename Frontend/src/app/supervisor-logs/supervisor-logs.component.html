@@ -1,0 +1,23 @@
+<app-supervisor-header></app-supervisor-header>
+<main>
+    <h3>Logs</h3>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Level</th>
+            <th scope="col">Description</th>
+            <th scope="col">Class</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let Log of logs">
+            <td>{{Log.createdAt}}</td>
+            <td>{{Log.level}}</td>
+            <td>{{Log.description}}</td>
+            <td>{{Log.senderClass}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <button type="button" class="pxl-knop" id="download-knop">Downloads logs</button>
+</main>

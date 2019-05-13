@@ -1,0 +1,17 @@
+<header>
+  <div class="justify-content-end" id="user-panel">
+    <i class="fa fa-user-o"></i>
+    <p>{{supervisor?.firstName}} {{supervisor?.lastName}}</p>
+  </div>
+  <div id="pxl-logo">
+    <img src="assets/images/logo_witte_rand.png" alt="logo" />
+  </div>
+  <div id="menu">
+    <ul>
+      <li><a [routerLink]="['/supervisor/upload']">Upload</a></li>
+      <li><a [routerLink]="['/supervisor/overzicht']">Overzicht</a></li>
+      <li><a [routerLink]="['/supervisor/logs']">Logs</a></li>
+      <li><a [routerLink]="['/uitloggen']">Uitloggen</a></li>
+    </ul>
+  </div>
+</header>

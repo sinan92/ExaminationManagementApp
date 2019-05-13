@@ -1,0 +1,15 @@
+#downloads{
+  float: left;
+  width: 40%;
+}
+
+#instructions{
+  float: left;
+  width: 60%;
+  padding-left: 5%;
+}
+
+#info p{
+  padding: 0;
+  margin: 0;
+}

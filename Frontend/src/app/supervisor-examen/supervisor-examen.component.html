@@ -1,0 +1,47 @@
+<app-supervisor-header></app-supervisor-header>
+<main>
+  <div id="downloads">
+    <h3>Bestanden</h3>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th scope="col">Naam</th>
+        <th scope="col">Link</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let examen of examens">
+        <td>{{examen.naam}}</td>
+        <td><a href="{{examen.file}}">Download</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="instructions">
+    <h3>Instructies</h3>
+
+    <p>
+      • Lees eerst aandachtig de volledige opgave. Elk woord heeft zijn betekenis. Mocht je oplossing niet helemaal werken, schrijf dan tenminste in commentaar wat je bedoeling was.
+      <br />
+      • Enkel een niet-WYSIWYG HTML-editor is toegestaan om de vragen op te lossen (Eclipse, Aptana, Netbeans, Webstorm, PHPStorm, Visual Studio, Sublime, Notepad++, …)
+      <br />
+      • Alle bestanden voor vraag 1 zijn reeds voor je aangemaakt. Verander de bestandsnaam niet. Dit zijn de enige bestanden (voor vraag 1) die verbeterd worden.
+      <br />
+      •  Figuren vind je in de subdirectory /figuren. De figuren (jpg, png, gif) mag je niet van naam en ook niet van plaats veranderen.
+      <br />
+      • Alle CSS-instellingen van de eerste vraag komen in het bestand /stijl/stijl.css. Dit stijlbestand mag je niet van naam en ook niet van directory veranderen.
+      <br />
+      • Deze opgave is in pdf-formaat beschikbaar. • De examens zullen verbeterd worden met behulp van Chrome, dus raden we je aan je werk ook te controleren in deze browser.
+    </p>
+
+    <h3>Info</h3>
+    <div id="info">
+      <p>Bestandsnaam: examenWebJuni2018</p>
+      <p>Grootte: 5 MB</p>
+      <p>MD5 Hash code: j22sj76jsjn99ksnskq700199</p>
+      <p>Gemaakt: 01/01/2018</p>
+    </div>
+  </div>
+
+</main>

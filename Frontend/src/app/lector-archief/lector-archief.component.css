@@ -1,0 +1,13 @@
+#overzicht{
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+#overzicht tr:nth-child(even){
+  background-color: #58a618;
+  color: #fff;
+}
+
+#verwijder-knop{
+  margin: 10px 0;
+}

@@ -1,0 +1,36 @@
+<app-supervisor-header></app-supervisor-header>
+<main>
+  <div class="container">
+      <div class="col-sm">
+        <h3>Wijzigen van examen: {{examen.naam}}</h3>
+        <form #examUpdateForm="ngForm" (ngSubmit)="onSubmit(examUpdateForm)">
+          <div class="row">
+            <div class="col-3">
+              <label for="vak">Naam</label>
+            </div>
+            <div class="col-5">
+              <div class="form-group">
+                <input class="form-control" type="text" [(ngModel)]="naam" name="naam" id="vak" value="{{examen.naam}}" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <label for="vak">Bestand</label>
+            </div>
+            <div class="col-5">
+              <div class="form-group">
+                <input type="file" name="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" (change)="fileChanged($event)">
+                <small id="fileHelp" class="form-text text-muted">Hier kun je de huidige examenskelet vervangen.</small>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <input type="submit" class="pxl-knop float-right" id="zoek-knop" value="Zoek" />
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</main>

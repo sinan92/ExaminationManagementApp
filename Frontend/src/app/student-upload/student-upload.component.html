@@ -1,0 +1,54 @@
+<app-student-header></app-student-header>
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+            <h3>Bestanden</h3>
+            <div class="form-group">
+              <form enctype="multipart/form-data"  (ngSubmit)="onSubmit(studentUploadForm)" [formGroup]="studentUploadForm">
+                <label for="exampleInputFile">Examen:</label>
+
+                <div class="form-group">
+                  <select [(ngModel)]="examen_id" name="examen_id" class="form-control" formControlName="examInput">
+                    <option *ngFor="let examen of examensStudent" [ngValue]="examen.id">{{examen.naam}}</option>
+                  </select>
+                </div>
+
+                
+
+
+                <input type="file"  accept=".zip" name="examen_bestand" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" (change)="fileChanged($event)" formControlName="examInputFile">
+
+                <small id="fileHelp" class="form-text text-muted">Upload hier de examen die je wilt inleveren.</small>
+
+                <button type="submit" class="pxl-knop" [disabled]="!studentUploadForm.valid">Upload</button>
+
+              </form>
+
+              <div class="alert alert-info" id="hashCode">
+                MD5 hash code: <strong>{{finishedExam_hash}}</strong>
+              </div>
+             
+              <div class="alert alert-success" id="succesMessage">
+                Examen geüpload
+              </div>
+
+              
+
+            </div>
+      </div>
+        <div class="col-sm">
+            <h3>Informatie</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan fringilla aliquam.
+              Sed convallis faucibus velit et facilisis. Mauris fringilla volutpat viverra. Aenean vulputate
+              odio nec finibus viverra. Ut vitae velit ultricies, faucibus lorem a, vestibulum dui.
+              Proin porttitor elementum ex non iaculis. Etiam consectetur aliquam lectus consectetur
+              fringilla. In sollicitudin augue eros. Sed augue dui, mollis ac cursus nec,
+              faucibus non quam. Vestibulum sed justo eget lacus tincidunt fringilla id eget lacus.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae
+            </p>
+          </div>
+      </div>
+  </div>
+</main>

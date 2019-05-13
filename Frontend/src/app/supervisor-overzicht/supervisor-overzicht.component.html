@@ -1,0 +1,25 @@
+<app-supervisor-header></app-supervisor-header>
+<main>
+  <h3 class="float-left">Overzicht</h3>
+  <div id="download-knop">
+    <button class="pxl-knop float-right" (click)="downloadAllFinishedExams()">Download alle examens</button>
+  </div>
+  <table id="overzicht" class="table">
+    <thead>
+      <tr>
+        <th><b>Naam</b></th>
+        <th><b>Studentnummer</b></th>
+        <th><b>Hash</b></th>
+        <th class="text-center"><b>Status</b></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of studenten">
+        <td>{{student.firstName}} {{student.lastName}}</td>
+        <td>{{student.studentNumber}}</td>
+        <td>{{student.finishedExam?.hash | hashAanwezig}}</td>
+        <td class="text-center"><i class="fa {{student.finishedExam | ingeleverd}}"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</main>
